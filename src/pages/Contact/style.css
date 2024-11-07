@@ -1,0 +1,31 @@
+.contact {
+    height: 100vh;
+    background-color: transparent;
+    background-image: url(../../assets/images/HomePage/Home_Section_1/Galaxy_Background.jpg);
+    background-size: 100% 150%;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.planet_1 {
+    position: absolute;
+    bottom: -15%;
+    right: 5%;
+}
+
+.planet_2 {
+    position: absolute;
+    top: 60%;
+    left: 5%;
+}
+
+.planet_3 {
+    position: absolute;
+    top: 20%;
+    right: 15%;
+}
+
+.fontStyle {
+    color: white;
+    font-size: 18;
+}

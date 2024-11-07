@@ -1,0 +1,136 @@
+.join {
+  width: 420px;
+  height: 76px;
+  background-image: url(../../assets/images/About/section_4/join.png);
+  background-size: 100% 100%;
+  border: none;
+  margin-top: 20px;
+  transition: 0.3s
+}
+
+.join:hover {
+  width: 420px;
+  height: 76px;
+  background-image: url(../../assets/images/About/section_4/join.png);
+  background-size: 100% 100%;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.7);
+  transition: 0.3s
+}
+
+.solar-system {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: absolute;
+  bottom: -20%
+}
+
+.sun {
+  position: absolute;
+  width: 637px;
+  height: 637px;
+  background-image: url(../../assets/images/About/section3/Earth_crop.png);
+  /* mask: url(../../assets/images/About/section3/mask_img.png) no-repeat;
+  mask-position: 50% 120%;
+  mask-size: 100vw 1526px; */
+  background-size: 100% 100%;
+  border-radius: 50%;
+  top: 20%;
+}
+
+.orbit {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  border-radius: 50%;
+  /* animation: rotate 20s linear infinite; */
+}
+
+.blue {
+  width: 184px;
+  height: 184px;
+  background-image: url(../../assets/images/About/section3/Planet_03-1.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  transform: translateX(-50%);
+}
+
+.pink {
+  width: 130px;
+  height: 130px;
+  background-image: url(../../assets/images/About/section3/Planet_03.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  right: -50%;
+  transform: translateX(-50%);
+}
+
+.Khroma {
+  width: 368px;
+  height: 368px;
+  background-image: url(../../assets/images/About/section3/Khroma_Planet.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  right: -35%;
+  transform: translateX(-50%);
+}
+
+.Imperialis {
+  width: 364px;
+  height: 364px;
+  background-image: url(../../assets/images/About/section3/Imperialis_planet.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Mylocritas {
+  width: 213px;
+  height: 213px;
+  background-image: url(../../assets/images/About/section3/Mylocritas_planet.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  transform: translate(-50%, 50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

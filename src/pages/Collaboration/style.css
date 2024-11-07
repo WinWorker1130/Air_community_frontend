@@ -1,0 +1,8 @@
+.collaboration {
+    height: 90vh;
+    background-color: transparent;
+    background-image: url(../../assets/images/HomePage/Home_Section_1/Galaxy_Background.jpg);
+    background-size: 100% 150%;
+    text-align: center;
+    padding-top: 10%;
+}
