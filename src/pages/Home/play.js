@@ -12,11 +12,10 @@ export default function Play() {
   }
 
   const getData = () => {
+    console.log("Here");
     axios.get(`http://localhost:5005/api/home/2`)
       .then(response => {
         console.log(response.data.homes);
-        
-        // setImages(response.data.homes);
       })
       .catch(error => {
         console.error('There was an error!', error);
