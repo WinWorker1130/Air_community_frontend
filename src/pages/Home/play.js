@@ -63,6 +63,7 @@ export default function Play() {
             className={hover ? 'drumplay drumplay_animation' : "drumplay"}
           ></button>
         </div>
+        {device === "nox" ? <button>sdfsdfdsfsfdfsdfsdf</button> : ""}
     </div>
   );
 }
