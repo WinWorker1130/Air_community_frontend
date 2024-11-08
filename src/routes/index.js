@@ -23,6 +23,16 @@ function AppRouters() {
     } else if (isDesktop) {
       dispatch(setDevice("PC"));
     }
+
+    const userAgent = navigator.userAgent || navigator.vendor;
+    if (
+      /nox/i.test(userAgent) ||               // Nox-specific identifier
+      /emulator/i.test(userAgent) ||          // Generic "emulator" identifier
+      /genymotion/i.test(userAgent) ||        // Genymotion
+      /android/i.test(userAgent) && !isMobile // Android on non-mobile device
+    ) {
+      dispatch(setDevice("Nox"));
+    }
   }, []);
 
   return (
