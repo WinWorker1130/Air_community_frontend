@@ -1,48 +1,49 @@
 .solar-system {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    position: absolute;
-    bottom: -30%
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  position: absolute;
+  bottom: -30%
+}
+
+.sun {
+  width: 637px;
+  height: 637px;
+  background-image: url(../../assets/images/About/section3/Earth_crop.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+}
+
+.orbit {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  /* border: 1px solid rgba(255, 255, 255, 0.5); */
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.blue {
+  width: 184px;
+  height: 184px;
+  background-image: url(../../assets/images/About/section3/Planet_03-1.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  transform: translateX(-50%);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .sun {
-    width: 637px;
-    height: 637px;
-    background-image: url(../../assets/images/About/section3/Earth_crop.png);
-    background-size: 100% 100%;
-    border-radius: 50%;
+
+  to {
+    transform: rotate(360deg);
   }
-  
-  .orbit {
-    position: absolute;
-    width: 900px;
-    height: 900px;
-    /* border: 1px solid rgba(255, 255, 255, 0.5); */
-    border-radius: 50%;
-    animation: rotate 20s linear infinite;
-  }
-  
-  .blue {
-    width: 184px;
-    height: 184px;
-    background-image: url(../../assets/images/About/section3/Planet_03-1.png);
-    background-size: 100% 100%;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 20%;
-    transform: translateX(-50%);
-  }
-  
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}
