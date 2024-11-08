@@ -31,73 +31,63 @@ export default function Main() {
     }, []);
 
     return (
-        <div className="parallax-main" style={{
-            backgroundPositionY: `${90 + mouseY * 5}%`, // Adjust based on mouseY
-            transition: "0.3s",
-        }}>
-            <section id='main'>
-                <div className='home'>
-                    {/* Apply calculated transforms based on mouseY */}
-                    <div
-                        className="mylocritas"
-                        style={{ transform: `translateY(${mouseY * 150}px)`, transition: "0.3s" }} // Adjust multiplier for desired effect
-                    >
-                        <img src={AD_Mylocritas} alt="Mylocritas" />
-                    </div>
+        <section id='main'>
+            <div className='home'>
+                {/* Apply calculated transforms based on mouseY */}
+                <div
+                    className="mylocritas"
+                    style={{ transform: `translateY(${mouseY * 150}px)`, transition: "0.3s" }} // Adjust multiplier for desired effect
+                >
+                    <img src={AD_Mylocritas} alt="Mylocritas" />
+                </div>
 
-                    <div
-                        className="devorah"
-                        style={{ transform: `translateY(${mouseY * 85}px)`, transition: "0.3s" }}
-                    >
-                        <img src={AD_Devorah} alt="Devorah" />
-                    </div>
+                <div
+                    className="devorah"
+                    style={{ transform: `translateY(${mouseY * 85}px)`, transition: "0.3s" }}
+                >
+                    <img src={AD_Devorah} alt="Devorah" />
+                </div>
 
-                    <div
-                        className="earth"
-                        style={{ transform: `translateY(${mouseY * 20}px)`, transition: "0.3s" }}
-                    >
-                        <img src={AD_Earth} alt="Earth" />
-                    </div>
+                <div
+                    className="earth"
+                    style={{ transform: `translateY(${mouseY * 20}px)`, transition: "0.3s" }}
+                >
+                    <img src={AD_Earth} alt="Earth" />
+                </div>
 
-                    <div className="logo">
-                        <div style={{ textAlign: 'center' }}>
-                            <img src={Logo} alt="Logo" />
-                            <div className="text-info">
-                                Air Drumming is a rhythmic exploration, a lifestyle statement, and a social movement,
-                            </div>
-                            <div className="text-info">
-                                that integrates users seamlessly across the mobile application, the physical
-                            </div>
-                            <div className="text-info">
-                                experience, and their connection with the larger communities.
-                            </div>
-                            <div style={{ marginTop: 30 }}>
-                                <button className='googlyPlay'></button>
-                                <button className='appStore'></button>
-                            </div>
+                <div className="logo">
+                    <div style={{ textAlign: 'center' }}>
+                        <img src={Logo} alt="Logo" />
+                        <div className="text-info">
+                            Air Drumming is a rhythmic exploration, a lifestyle statement, and a social movement,
+                        </div>
+                        <div className="text-info">
+                            that integrates users seamlessly across the mobile application, the physical
+                        </div>
+                        <div className="text-info">
+                            experience, and their connection with the larger communities.
+                        </div>
+                        <div style={{ marginTop: 30 }}>
+                            <button className='googlyPlay'></button>
+                            <button className='appStore'></button>
                         </div>
                     </div>
-
-                    <div
-                        className="aurelia"
-                        style={{ transform: `translateY(${mouseY * 80}px)`, transition: "0.3s" }}
-                    >
-                        <img src={Aurelia} alt="Aurelia" />
-                    </div>
-
-                    <div
-                        className="asteroid"
-                        style={{ transform: `translateY(${mouseY * 7}px)`, transition: "0.3s" }}
-                    >
-                        <img src={Asteroid} alt="Asteroid" />
-                    </div>
                 </div>
-            </section>
-            <section id='play'>
-                <div style={{ width: "100%" }}>
-                    <Play />
+
+                <div
+                    className="aurelia"
+                    style={{ transform: `translateY(${mouseY * 80}px)`, transition: "0.3s" }}
+                >
+                    <img src={Aurelia} alt="Aurelia" />
                 </div>
-            </section>
-        </div>
+
+                <div
+                    className="asteroid"
+                    style={{ transform: `translateY(${mouseY * 7}px)`, transition: "0.3s" }}
+                >
+                    <img src={Asteroid} alt="Asteroid" />
+                </div>
+            </div>
+        </section>
     );
 }

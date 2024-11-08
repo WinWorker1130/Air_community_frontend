@@ -24,41 +24,26 @@ export default function Play() {
   // }
 
   return (
-    <div className='play'
-      onMouseEnter={() => link_section()}
-      onMouseLeave={() => setHover(false)}
-      style={{ overflow: "hidden", position: "absolute", bottom: '-7%', width: "100%", textAlign: "center" }}
-    >
-      <div >
-        <button
-          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
-          className={hover ? `drumming drumming_animation ` : "drumming"}
-        />
-        <button
-          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
-          className={hover ? 'citing citing_animation' : "citing"}
-        ></button>
+    <section id='play'>
+      <div className='bento'
+        onMouseEnter={() => link_section()}
+        onMouseLeave={() => setHover(false)}
+      >
+        <div style={{overflow: "hidden"}}>
+          <div style={{textAlign: "center"}}>
+            <button className={hover ? `drumming drumming_animation ` : "drumming"} />
+            <button className={hover ? 'citing citing_animation' : "citing"} />
+          </div>
+          <div style={{textAlign: "center"}}>
+            <button className={hover ? 'star star_animation' : "star"} />
+            <button className={hover ? 'feel feel_animation' : "feel"} />
+          </div>
+          <div style={{textAlign: "center"}}>
+            <button className={hover ? 'learn learn_animation' : "learn"} />
+            <button className={hover ? 'drumplay drumplay_animation' : "drumplay"} />
+          </div>
+        </div>
       </div>
-      <div style={{ marginTop: 10 }}>
-        <button
-          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
-          className={hover ? 'star star_animation' : "star"}
-        ></button>
-        <button
-          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
-          className={hover ? 'feel feel_animation' : "feel"}
-        ></button>
-      </div>
-      <div style={{ marginTop: 10 }}>
-        <button
-          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
-          className={hover ? 'learn learn_animation' : "learn"}
-        ></button>
-        <button
-          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
-          className={hover ? 'drumplay drumplay_animation' : "drumplay"}
-        ></button>
-      </div>
-    </div>
+    </section >
   );
 }
