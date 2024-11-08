@@ -1,13 +1,8 @@
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
+import axios from 'axios'
 import '../../assets/css/styles.css';
 import '../../assets/css/animated.css';
-
-const styles = {
-  animations: {
-    animation: 'slideInLeft 0.5s ease-out forwards',
-  }
-}
 
 export default function Play() {
   const [hover, setHover] = React.useState(false);
@@ -16,44 +11,52 @@ export default function Play() {
     setHover(true);
   }
 
+  const getData = () => {
+    axios.get(`http://localhost:5005/api/home/2`)
+      .then(response => {
+        console.log(response.data.homes);
+        
+        // setImages(response.data.homes);
+      })
+      .catch(error => {
+        console.error('There was an error!', error);
+      });
+  }
+
+  useEffect(() => {
+    getData();
+  }, [])
+
   return (
-    <section id="play" >
       <div className='play'
         onMouseEnter={() => link_section()}
         onMouseLeave={() => setHover(false)}
-      ></div>
-      <div className='play'>
-        <div>
+        style={{overflow: "hidden"}}
+      >
+        <div >
           <button
-            className='drumming'
-            style={hover ? styles.animations : {textAlign: "center"}}
+            className={hover ? `drumming drumming_animation ` : "drumming"}
           ></button>
           <button
-            className='citing'
-            style={hover ? styles.animations : {textAlign: "center"}}
-            ></button>
+            className={hover ? 'citing citing_animation' : "citing"}
+          ></button>
         </div>
         <div style={{ marginTop: 10 }}>
           <button
-            className='star'
-            style={hover ? styles.animations : {textAlign: "center"}}
-            ></button>
+            className={hover ? 'star star_animation' : "star"}
+          ></button>
           <button
-            className='feel'
-            style={hover ? styles.animations : {textAlign: "center"}}
-            ></button>
+            className={hover ? 'feel feel_animation' : "feel"}
+          ></button>
         </div>
         <div style={{ marginTop: 10 }}>
           <button
-            className='learn'
-            style={hover ? styles.animations : {textAlign: "center"}}
-            ></button>
+            className={hover ? 'learn learn_animation' : "learn"}
+          ></button>
           <button
-            className='drumplay'
-            style={hover ? styles.animations : {textAlign: "center"}}
-            ></button>
+            className={hover ? 'drumplay drumplay_animation' : "drumplay"}
+          ></button>
         </div>
       </div>
-    </section>
   );
 }

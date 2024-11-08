@@ -28,47 +28,52 @@ import Earth from '../../assets/images/About/section3/Earth_crop.png';
 
 const SolarSystem = () => {
   const [hover, setHover] = useState(false);
+  const [position, setPosition] = useState(6);
+  const [move, setMove] = useState(0);
   const [year, setYear] = useState(0);
-  const [degree, setDegree] = useState(-10);
+  const [degree, setDegree] = useState(-5);
   const years = [2014, 2015, 2017, 2019, 2021, 2022, 2023, 2024];
   const planets = [Planet_2014, Planet_2015, Planet_2017, Planet_2019, Planet_2021, Planet_2022, Planet_2023, Planet_2024];
 
   const link_section = () => {
-    window.location.href="/about#milestones";
-    
+    window.location.href = "/about#milestones";
+
     setHover(true);
-    setDegree(-10);
+    setPosition(6);
+    setDegree(-5);
     change_degree(2024);
   }
 
-  const change_degree = (tmp) => {
+  const change_degree = (tmp, index) => {
     if (tmp === year) {
       return;
     }
     setYear(tmp);
+    setDegree(degree + 20);
+
     if (tmp === 2024) {
-      setDegree(degree + 10);
+      setMove(0);
     }
     if (tmp === 2023) {
-      setDegree(degree - 10);
+      setMove(7);
     }
     if (tmp === 2022) {
-      setDegree(degree + 10);
+      setMove(14);
     }
     if (tmp === 2021) {
-      setDegree(degree - 10);
+      setMove(21);
     }
     if (tmp === 2019) {
-      setDegree(degree + 10);
+      setMove(28);
     }
     if (tmp === 2017) {
-      setDegree(degree - 10);
+      setMove(35);
     }
     if (tmp === 2015) {
-      setDegree(degree + 10);
+      setMove(42);
     }
     if (tmp === 2014) {
-      setDegree(degree - 10);
+      setMove(49);
     }
   }
 
@@ -80,25 +85,25 @@ const SolarSystem = () => {
         style={styles.container}>
         <div style={styles.mask}>
           <img src={Milestones} style={{ marginTop: "13%" }} />
-          <div style={{ position: "absolute", zIndex: 9, justifyContent: "center", width: "100%" }}>
-            <div style={{ display: "flex", alignItems: "center", marginTop: "3%", width: "53%", justifyContent: "space-between", height: 200 }}>
+          <div style={{ justifyContent: "center", width: "100%" }}>
+            <div style={{...styles.years_group, left: `${move}%`}}>
               {
                 planets.map((planet, index) => {
                   return (
                     <div>
-                      <img src={planet} style={year === years[index] ? { ...styles.palnet, width: 120, height: 120 } : styles.palnet} onClick={() => change_degree(years[index])} />
+                      <img src={planet} style={year === years[index] ? { ...styles.palnet, width: 64, height: 64 } : styles.palnet} onClick={() => change_degree(years[index], index)} />
                       {year === years[index] ? <div style={{ color: "white", fontSize: 32, transition: "0.7s" }}>{years[index]}</div> : ""}
                     </div>
                   )
                 })
               }
             </div>
-            {year === 2024 ? <div style={hover ? { ...styles.animation, textAlign: "flex-start" } : {textAlign: "flex-start"}}>
+            {year === 2024 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
               <img src={image_2024} style={styles.animation} />
             </div> : ""}
-            {year === 2023 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2023 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2023</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -110,9 +115,9 @@ const SolarSystem = () => {
               <img src={image_2023_1} style={styles.animation} />
               <img src={image_2023_2} style={styles.animation} />
             </div> : ""}
-            {year === 2022 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2022 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2022</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -124,9 +129,9 @@ const SolarSystem = () => {
               <img src={image_2022_1} style={styles.animation} />
               <img src={image_2022_2} style={styles.animation} />
             </div> : ""}
-            {year === 2021 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2021 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2021</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -137,9 +142,9 @@ const SolarSystem = () => {
               </div>
               <img src={image_2021} style={styles.animation} />
             </div> : ""}
-            {year === 2019 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2019 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2019</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -148,9 +153,9 @@ const SolarSystem = () => {
               </div>
               <img src={image_2019} style={styles.animation} />
             </div> : ""}
-            {year === 2017 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2017 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2017</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -159,9 +164,9 @@ const SolarSystem = () => {
               </div>
               <img src={image_2017} style={styles.animation} />
             </div> : ""}
-            {year === 2015 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2015 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2015</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -171,9 +176,9 @@ const SolarSystem = () => {
               </div>
               <img src={image_2015} style={styles.animation} />
             </div> : ""}
-            {year === 2014 ? <div style={{ ...styles.animation, textAlign: "flex-start" }}>
-              <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <div>
+            {year === 2014 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
+              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
+                <div style={{paddingLeft: 35}}>
                   <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2014</span>
                 </div>
                 <div style={{ textAlign: "left" }}>
@@ -188,19 +193,19 @@ const SolarSystem = () => {
               <div style={{ width: 637, height: 637, backgroundImage: `url(${Earth})`, backgroundSize: "100% 100%" }}></div>
               {/* <img src={Earth} width={637} height={637}/> */}
             </div>
-            <div className="orbit" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree}deg)` }}>
+            <div className="orbit" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree*8}deg)` }}>
               <div className="blue"></div>
             </div>
-            <div className="orbit" style={{ width: 750, height: 750, transition: 'transform 0.7s ease', transform: `rotate(${degree}deg)` }}>
+            <div className="orbit" style={{ width: 950, height: 950, transition: 'transform 0.7s ease', transform: `rotate(${degree*6}deg)` }}>
               <div className="pink"></div>
             </div>
-            <div className="orbit" style={{ width: 1550, height: 1550, transition: 'transform 0.7s ease', transform: `rotate(${degree}deg)` }}>
+            <div className="orbit" style={{ width: 1550, height: 1550, transition: 'transform 0.7s ease', transform: `rotate(${degree*7}deg)` }}>
               <div className="Khroma"></div>
             </div>
-            <div className="orbit" style={{ width: 1850, height: 1850, transition: 'transform 0.7s ease', transform: `rotate(${degree}deg)` }}>
+            <div className="orbit" style={{ width: 1850, height: 1850, transition: 'transform 0.7s ease', transform: `rotate(${degree*5}deg)` }}>
               <div className="Imperialis"></div>
             </div>
-            <div className="orbit" style={{ width: 2050, height: 2050, transition: 'transform 0.7s ease', transform: `rotate(${degree}deg)` }}>
+            <div className="orbit" style={{ width: 2050, height: 2050, transition: 'transform 0.7s ease', transform: `rotate(${degree*9}deg)` }}>
               <div className="Mylocritas"></div>
             </div>
             {/* <div className="orbit" style={{ animation: "rotate 25s linear infinite", width: 2050, height: 2050 }}>
@@ -240,11 +245,22 @@ const styles = {
   },
   palnet: {
     transition: "0.7s",
-    width: 64,
-    height: 64
+    width: 32,
+    height: 32
   },
   animation: {
     animation: animations.popIn
+  },
+  years_group: {
+    display: "flex", 
+    alignItems: "center", 
+    marginTop: "3%", 
+    width: "50%", 
+    justifyContent: "space-between", 
+    height: 200, 
+    position: "absolute",
+    zIndex: 11,
+    transition: "0.5s"
   }
 };
 

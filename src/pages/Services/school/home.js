@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { animations, easings} from 'react-animation'
 import home_Schools from '../../../assets/images/services/school/school_back.png'
 import Schools from '../../../assets/images/services/school/school.png'
 import Provide from '../../../assets/images/services/school/provide.png'
@@ -9,27 +10,28 @@ import Planet_2 from '../../../assets/images/services/Planet-1.png'
 import Planet_3 from '../../../assets/images/services/Planet-2.png'
 
 export default function Main() {
+    const [hover, setHover] = useState(false);
 
     return (
-        <div style={styles.home}>
+        <div style={styles.home} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
             <div>
-                <img src={Planet_1} style={styles.planet_red} />
-                <img src={Planet_2} style={styles.planet_green} />
-                <img src={Planet_3} style={styles.planet_yellow} />
+                <img src={Planet_1} style={hover ? {...styles.planet_red, animation: `pop-in ${easings.easeOutExpo} 1.5s forwards`} : styles.planet_red} />
+                <img src={Planet_2} style={hover ? {...styles.planet_green, animation: `pop-in ${easings.easeOutExpo} 1.9s forwards`} : styles.planet_green} />
+                <img src={Planet_3} style={hover ? {...styles.planet_yellow, animation: `pop-in ${easings.easeOutExpo} 0.9s forwards`} : styles.planet_yellow} />
                 <div style={styles.schools}>
                     <div style={styles.detail}>
                         <div>
-                            <img src={Schools} />
+                            <img src={Schools} className={hover ? 'fadeInLeft_animation' : ''} />
                         </div>
-                        <div style={{ marginTop: 15 }}>
+                        <div style={{ marginTop: 15 }} className={hover ? 'provide_animation' : ''} >
                             <img src={Provide} />
                         </div>
-                        <div style={{ marginTop: 15 }}>
+                        <div style={{ marginTop: 15 }} className={hover ? 'worked_animation' : ''} >
                             <img src={Worked} />
                         </div>
                     </div>
                     <div style={styles.image}>
-                        <img src={School_back} />
+                        <img src={School_back}  className={hover ? 'fadeInRight_animation' : ''} />
                     </div>
                 </div>
             </div>
@@ -53,13 +55,14 @@ const styles = {
         height: "100vh"
     },
     detail: {
-        marginRight: 20
+        marginRight: 20,
+        overflow: "hidden"
     },
     planet_red: {
         position: "absolute",
         width: 46,
         top: "10%",
-        right: "10%"
+        right: "10%",
     },
     planet_green: {
         position: "absolute",

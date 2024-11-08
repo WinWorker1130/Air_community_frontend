@@ -1,16 +1,18 @@
 import * as React from 'react';
 import { useEffect } from 'react';
+import { animations, easings} from 'react-animation'
 import Shutterstack from '../../assets/images/Community/image_19.png'
 import Experience from '../../assets/images/Community/First_Experience.png'
 
 export default function Play() {
+  const [hover, setHover] = React.useState(false)
 
   return (
-    <div style={{ position: "absolute", width: '100%', bottom: '0%' }}>
+    <div style={{ position: "absolute", width: '100%', bottom: '0%' }} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
       <div className='play'>
         <div style={{ color: 'white', marginTop: "2%" }}>We recognize and celebrate little wins of yours, with you. </div>
         <div style={{ color: 'white' }}> We will feature top AIRbassadors on leaderboards and spotlight up-and-coming AIRtists to recognize </div>
-        <img src={Shutterstack} style={styles.shutter} />
+        <img src={Shutterstack} style={hover ? {...styles.shutter, animation: `pop-in ${easings.easeOutExpo} 1s forwards`} : styles.shutter} />
         <div style={{ marginTop: 20 }}>
           <img src={Experience} />
           <div style={{ color: "white", marginTop: 10 }}>Join our group of AIRplorers to beta test newly launched features and have your voices heard.</div>

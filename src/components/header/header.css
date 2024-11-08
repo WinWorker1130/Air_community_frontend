@@ -4,7 +4,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px 20px 0px;
-    background: linear-gradient(to bottom, #111, #22222200);
+    background-image: url(../../assets/images/Header.png);
+    background-size: 100% 100%;
     color: white;
     position: fixed;
     width: 100%;
@@ -46,4 +47,12 @@
 .dropdown-arrow {
     font-size: 12px;
     margin-left: 5px;
+}
+
+.main-header.hidden {
+    top: -100px; /* Adjust this value based on your header height */
+}
+
+.main-header.visible {
+    top: 0;
 }

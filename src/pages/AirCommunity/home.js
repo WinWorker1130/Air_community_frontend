@@ -33,19 +33,19 @@ export default function Main() {
             transition: "0.3s"
         }}>
             <section id="signup">
-                <img src={Planet_violet} style={{...styles.violet, animation: `pop-in ${easings.easeOutExpo} 0.7s forwards`}} />
-                <img src={Planet_Green} style={{...styles.green, animation: `fade-in ${easings.easeOutExpo} 0.7s forwards`}} />
-                <img src={Planet_yellow} style={{...styles.yellow, animation: `bounce-in ${easings.easeOutExpo} 0.4s forwards`}} />
-                <img src={Planet_red} style={{...styles.red, animation: `slide-in ${easings.easeOutExpo} 1s forwards`}} />
-                <img src={Planet_blue} style={{...styles.blue, animation: `fade-in ${easings.easeOutExpo} 1.3s forwards`}} />
+                <img src={Planet_violet} style={{...styles.violet, animation: `pop-in ${easings.easeOutExpo} 0.9s forwards`}} />
+                <img src={Planet_Green} style={{...styles.green, animation: `pop-in ${easings.easeOutExpo} 0.9s forwards`}} />
+                <img src={Planet_yellow} style={{...styles.yellow, animation: `bounce-inpop-in ${easings.easeOutExpo} 0.6s forwards`}} />
+                <img src={Planet_red} style={{...styles.red, animation: `pop-in ${easings.easeOutExpo} 1s forwards`}} />
+                <img src={Planet_blue} style={{...styles.blue, animation: `pop-in ${easings.easeOutExpo} 1.3s forwards`}} />
                 <div style={styles.home}>
                     <img src={AirCommunity} />
                     <div style={{ color: 'white' }}>Welcome to our Air+ Community - where our AIRbassadors (users), AIRtists (music creators), </div>
                     <div style={{ color: 'white', marginBottom: "3%" }}>and AIR partners (brands) connect. </div>
                     <div>
-                        <img src={Artist} style={{...styles.artist, animation: `pop-in ${easings.easeOutExpo} 0.4s forwards`}} />
-                        <img src={Bassador} style={{...styles.bassador, animation: `slide-in ${easings.easeOutExpo} 1s forwards`}} />
-                        <img src={Partner} style={{...styles.partner, animation: `fade-in ${easings.easeOutExpo} 0.7s forwards`}} />
+                        <img src={Artist} style={{...styles.artist, animation: `pop-in ${easings.easeOutExpo} 1s forwards`}} />
+                        <img src={Bassador} style={{...styles.bassador, animation: `pop-in ${easings.easeOutExpo} 2s forwards`}} />
+                        <img src={Partner} style={{...styles.partner, animation: `pop-in ${easings.easeOutExpo} 2.7s forwards`}} />
                     </div>
                     <div style={{ color: 'white', marginTop: "2%" }}>Sign up for our Air Drumming mobile application to access the latest features, </div>
                     <div style={{ color: 'white' }}> updates, and rewards! </div>
@@ -53,7 +53,7 @@ export default function Main() {
                 </div>
             </section>
             <section id="join">
-                <div style={{ position: "absolute", width: '100%', bottom: '0%' }}>
+                <div style={{ position: "absolute", width: '100%', bottom: '0%', textAlign: "center" }}>
                     <Play />
                 </div>
             </section>

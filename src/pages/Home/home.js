@@ -28,7 +28,7 @@ export default function Main() {
     return (
         <div className="parallax-main" style={{
             backgroundPositionY: `${90 + mouseY * 5}%`, // Adjust based on mouseY
-            transition: "0.3s"
+            transition: "0.3s",
         }}>
             <section id='main'>
                 <div className='home'>
@@ -61,10 +61,10 @@ export default function Main() {
                                 Air Drumming is a rhythmic exploration, a lifestyle statement, and a social movement,
                             </div>
                             <div className="text-info">
-                                that integrates users seamlessly across the mobile application, the physical experience, and their connection
+                                that integrates users seamlessly across the mobile application, the physical 
                             </div>
                             <div className="text-info">
-                                with the larger communities.
+                                experience, and their connection with the larger communities.
                             </div>
                             <div style={{ marginTop: 30 }}>
                                 <button className='googlyPlay'></button>
@@ -89,7 +89,7 @@ export default function Main() {
                 </div>
             </section>
             <section id='play'>
-                <div style={{ position: "absolute", width: '100%', bottom: '0%' }}>
+                <div style={{ position: "absolute", bottom: '-7%', left: "20%" }}>
                     <Play />
                 </div>
             </section>

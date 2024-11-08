@@ -16,9 +16,9 @@ export default function Collaboratopn() {
       <img src={Planet3} className='planet_3' style={{animation: `pop-in ${easings.easeOutExpo} 2s forwards`}}/>
       <img src={Planet1} className='planet_1' style={{animation: `pop-in ${easings.easeOutExpo} 0.2s forwards`, bottom: "-5%"}}/>
       <div>
-        <img src={collab_1} style={{...styles.collab_1, animation: `slide-in ${easings.easeOutExpo} 0.7s forwards`, bottom: "-5%"}} />
+        <img src={collab_1} style={{...styles.collab_1, animation: `pop-in ${easings.easeOutExpo} 0.7s forwards`, bottom: "-5%"}} />
         <img src={collab_2} style={{...styles.collab_1, marginLeft: 20, animation: `pop-in ${easings.easeOutExpo} 1s forwards`, bottom: "-5%"}} />
-        <img src={collab_3} style={{...styles.collab_1, marginLeft: 20, animation: `pop-in ${easings.easeOutExpo} 0.5s forwards`, bottom: "-5%"}} />
+        <img src={collab_3} style={{...styles.collab_1, marginLeft: 20, animation: `pop-in ${easings.easeOutExpo} 1.7s forwards`, bottom: "-5%"}} />
       </div>
     </div>
   );

@@ -15,9 +15,8 @@ export default function Play() {
   const [hover, setHover] = React.useState(false);
 
   const link_section = () => {
-    window.location.href="/about#who";
     
-    setHover(true);
+    
     // setDegree(-10);
     // change_degree(2024);
   }
@@ -39,9 +38,8 @@ export default function Play() {
   }, []);
 
   return (
-    <section id="who" >
       <div className='play'
-        onMouseEnter={() => link_section()}
+        onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
         <div>
@@ -64,6 +62,5 @@ export default function Play() {
           ></button>
         </div>
       </div>
-    </section>
   );
 }

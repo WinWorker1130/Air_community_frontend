@@ -5,17 +5,19 @@ import Planet3 from '../../assets/images/Planet-2.png'
 import touch from '../../assets/images/contact/Get_in_Touch.png'
 import contact from '../../assets/images/contact/Comet_01.png'
 import zIndex from '@mui/material/styles/zIndex';
+import { animations, easings } from 'react-animation'
+import './contact.css'
 
 export default function Collaboratopn() {
 
   return (
     <div className='contact'>
-      <img src={Planet2} className='planet_2' style={{left: "10%"}} />
-      <img src={Planet3} className='planet_3' />
-      <img src={Planet1} className='planet_1' style={{bottom: "5%"}} />
+      <img src={Planet2} className='planet_2' style={{left: "10%", animation: `pop-in ${easings.easeOutExpo} 2.9s forwards`}} />
+      <img src={Planet3} className='planet_3' style={{animation: `pop-in ${easings.easeOutExpo} 2.5s forwards`}}/>
+      <img src={Planet1} className='planet_1' style={{bottom: "5%", animation: `pop-in ${easings.easeOutExpo} 2s forwards`}} />
       <div style={styles.container}>
         <div style={{width: '20%'}}></div>
-        <div style={styles.input_data}>
+        <div className='form_animation'>
           <form style={styles.form}>
             <div style={styles.row}>
               <label style={styles.label_style}>Name*</label>
@@ -57,10 +59,10 @@ export default function Collaboratopn() {
             <button type="submit" style={styles.button}>Send</button>
           </form>
         </div>
-        <div style={styles.iamge_part}>
-           <img src={touch} />
-           <div style={{color: "white", fontSize: 20, paddingLeft: 100}}>Let us know how can we help you.</div>
-           <img src={contact}/>
+        <div className='image_part'>
+           <img src={touch} style={{animation: `fade-in ${easings.easeOutExpo} 3.9s forwards`}} />
+           <div style={{color: "white", fontSize: 20, paddingLeft: 100, animation: `fade-in ${easings.easeOutExpo} 3.9s forwards`}}>Let us know how can we help you.</div>
+           <img src={contact} className='contact_image'/>
         </div>
       </div>
     </div>
@@ -71,18 +73,6 @@ const styles = {
   container: {
     width: '100%',
     display: 'flex'
-  },
-  input_data: {
-    position: "absolute",
-    left: "18%",
-    zIndex: 2,
-    width: '35%'
-  },
-  iamge_part: {
-    position: "absolute",
-    right: "20%",
-    paddingTop: 35,
-    width: '35%',
   },
   label_style: {
     textAlign: "left"
@@ -122,5 +112,8 @@ const styles = {
     border: 'none',
     borderRadius: '4px',
     cursor: 'pointer',
+  },
+  animations: {
+    animation: `pop-in ${easings.easeOutExpo} 0.9s forwards`
   }
 };
