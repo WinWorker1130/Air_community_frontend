@@ -31,15 +31,15 @@ export default function Play() {
     >
       {device === "Nox" ?<div >
         <button
-          style={device === "Nox" ? { width: 252, height: 252 } : ""}
+          // style={device === "Nox" ? { width: 252, height: 252 } : ""}
           className={hover ? `drumming drumming_animation ` : "drumming"}
         />
         <button
-          style={device === "Nox" ? { width: 420, height: 252 } : ""}
+          // style={device === "Nox" ? { width: 420, height: 252 } : ""}
           className={hover ? 'citing citing_animation' : "citing"}
         ></button>
       </div> : ""}
-      <div style={{ marginTop: 10 }}>
+      {/* <div style={{ marginTop: 10 }}>
         <button
           style={device === "Nox" ? { width: 420, height: 252 } : ""}
           className={hover ? 'star star_animation' : "star"}
@@ -58,7 +58,7 @@ export default function Play() {
           style={device === "Nox" ? { width: 420, height: 252 } : ""}
           className={hover ? 'drumplay drumplay_animation' : "drumplay"}
         ></button>
-      </div>
+      </div> */}
     </div>
   );
 }
