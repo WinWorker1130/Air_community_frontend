@@ -16,22 +16,12 @@ function AppRouters() {
   const dispatch = useDispatch(); // Get the dispatch function
 
   useEffect(() => {
-    if (isMobile) {
-      dispatch(setDevice("Mobile"));
-    } else if (isTablet) {
-      dispatch(setDevice("Tablet"));
-    } else if (isDesktop) {
-      dispatch(setDevice("PC"));
-    }
-
-    const userAgent = navigator.userAgent || navigator.vendor;
-    if (
-      /nox/i.test(userAgent) ||               // Nox-specific identifier
-      /emulator/i.test(userAgent) ||          // Generic "emulator" identifier
-      /genymotion/i.test(userAgent) ||        // Genymotion
-      /android/i.test(userAgent) && !isMobile // Android on non-mobile device
-    ) {
+    if (window.innerWidth <= 768) {
       dispatch(setDevice("Nox"));
+    } else if (window.innerWidth > 768 && window.innerWidth <= 960) {
+      dispatch(setDevice("Tablet"));
+    } else if (window.innerWidth > 960) {
+      dispatch(setDevice("PC"));
     }
   }, []);
 
