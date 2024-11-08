@@ -29,36 +29,36 @@ export default function Play() {
       onMouseLeave={() => setHover(false)}
       style={{ overflow: "hidden", position: "absolute", bottom: '-7%', width: "100%", textAlign: "center" }}
     >
-      {device === "Nox" ?<div >
+      <div >
         <button
-          // style={device === "Nox" ? { width: 252, height: 252 } : ""}
+          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
           className={hover ? `drumming drumming_animation ` : "drumming"}
         />
         <button
-          // style={device === "Nox" ? { width: 420, height: 252 } : ""}
+          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
           className={hover ? 'citing citing_animation' : "citing"}
         ></button>
-      </div> : ""}
-      {/* <div style={{ marginTop: 10 }}>
+      </div>
+      <div style={{ marginTop: 10 }}>
         <button
-          style={device === "Nox" ? { width: 420, height: 252 } : ""}
+          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
           className={hover ? 'star star_animation' : "star"}
         ></button>
         <button
-          style={device === "Nox" ? { width: 252, height: 252 } : ""}
+          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
           className={hover ? 'feel feel_animation' : "feel"}
         ></button>
       </div>
       <div style={{ marginTop: 10 }}>
         <button
-          style={device === "Nox" ? { width: 252, height: 252 } : ""}
+          style={device === "Nox" ? { width: 252, height: 252 } : {textAlign: "center"}}
           className={hover ? 'learn learn_animation' : "learn"}
         ></button>
         <button
-          style={device === "Nox" ? { width: 420, height: 252 } : ""}
+          style={device === "Nox" ? { width: 420, height: 252 } : {textAlign: "center"}}
           className={hover ? 'drumplay drumplay_animation' : "drumplay"}
         ></button>
-      </div> */}
+      </div>
     </div>
   );
 }
