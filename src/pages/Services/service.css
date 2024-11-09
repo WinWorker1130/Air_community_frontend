@@ -1,0 +1,96 @@
+.service-schools {
+    height: 1118px;
+    width: 100%;
+    position: relative;
+    background-image: url(../../assets/images/services/school/school_back.png);
+    background-size: 100% 100%
+}
+
+.schools-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+}
+
+.schools-intro {
+    background-image: url(../../assets/images/services/school/school.png);
+    background-size: 100% 100%;
+    width: 608px;
+    height: 348px;
+    margin-right: 20px;
+}
+
+.schools-provide {
+    background-image: url(../../assets/images/services/school/provide.png);
+    background-size: 100% 100%;
+    width: 608px;
+    height: 191px;
+    margin-right: 20px;
+}
+
+.schools-worked {
+    background-image: url(../../assets/images/services/school/worked.png);
+    background-size: 100% 100%;
+    width: 608px;
+    height: 172px;
+    margin-right: 20px;
+}
+
+.schools-image {
+    background-image: url(../../assets/images/services/school/school_Image.png);
+    background-size: 100% 100%;
+    width: 506px;
+    height: 759px;
+}
+
+@media (max-width: 360px) {
+    .service-schools {
+        height: 1471.06px;
+        width: 100%;
+        position: relative;
+        background-image: url(../../assets/images/services/school/school_back.png);
+        background-size: 100% 100%;
+        margin-right: 0px;
+    }
+
+    .schools-detail {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0px;
+    }
+
+    .schools-intro {
+        background-image: url(../../assets/images/services/school/school_mobile.png);
+        background-size: 100% 100%;
+        width: 312px;
+        height: 421px;
+        margin-right: 0px;
+    }
+
+    .schools-provide {
+        background-image: url(../../assets/images/services/school/provide_mobile.png);
+        background-size: 100% 100%;
+        width: 312px;
+        height: 165px;
+        margin-right: 0px;
+    }
+
+    .schools-worked {
+        background-image: url(../../assets/images/services/school/worked_mobile.png);
+        background-size: 100% 100%;
+        width: 312px;
+        height: 206px;
+        margin-right: 0px;
+    }
+
+    .schools-image {
+        background-image: url(../../assets/images/services/school/school_Image.png);
+        background-size: 100% 100%;
+        width: 312px;
+        height: 467px;
+        margin-bottom: 20px;
+    }
+}

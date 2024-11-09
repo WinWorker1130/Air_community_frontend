@@ -4,6 +4,8 @@ import Divider from '@mui/material/Divider';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { FaAngleDown } from "react-icons/fa";
+import { FaListUl } from "react-icons/fa";
+import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import './header.css';
 import Logo from '../../assets/images/AirDrumming_Logo-03.png';
 
@@ -44,7 +46,7 @@ const Header = () => {
         <header className={`main-header ${showHeader ? 'visible' : 'hidden'}`}>
             <div className="header-logo">
                 <Link to="/">
-                    <img src={Logo} alt="App Logo" width={157} height={76} />
+                    <img src={Logo} alt="App Logo" className='header-logo-img' />
                 </Link>
             </div>
             <nav className="navbar">
@@ -54,7 +56,7 @@ const Header = () => {
                     <li>
                         <Link to="/services">
                             <span
-                                style={{display: "flex", alignItems: 'center'}}
+                                style={{ display: "flex", alignItems: 'center' }}
                                 id="basic-button"
                                 aria-controls={open ? 'basic-menu' : undefined}
                                 aria-haspopup="true"
@@ -85,6 +87,32 @@ const Header = () => {
                     <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </nav>
+            <span
+                className="basic-menu"
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+                onClick={handleClick}
+            >
+                <MenuSharpIcon />
+            </span>
+            <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                    'aria-labelledby': 'basic-button',
+                }}
+            >
+                <Link to="/home"><MenuItem onClick={handleClose}>Home</MenuItem></Link>
+                <Link to="/about"><MenuItem onClick={handleClose}>About</MenuItem></Link>
+                <Link to="/services"><MenuItem onClick={handleClose}>Services</MenuItem></Link>
+                <Link to="/collaboration"><MenuItem onClick={handleClose}>Collaboration</MenuItem></Link>
+                <Link to="/community"><MenuItem onClick={handleClose}>Air Community</MenuItem></Link>
+                <Link to="/contact"><MenuItem onClick={handleClose}>Contact Us</MenuItem></Link>
+            </Menu>
         </header>
     );
 };

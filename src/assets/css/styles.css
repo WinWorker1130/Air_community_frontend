@@ -62,84 +62,6 @@ a:visited {
   margin: 0 auto;
 }
 
-.logo {
-  position: absolute;
-  top: 15%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.logo img {
-  width: 450px;
-}
-
-.mylocritas {
-  position: absolute;
-  top: 25%;
-  transition: all 0.1s;
-  left: 20%; 
-  width: "300px"
-}
-
-.mylocritas img {
-  width: 150px;
-}
-
-.devorah {
-  position: absolute;
-  top: 35%;
-  transition: all 0.1s;
-  left: 8%; 
-  width: "300px"
-}
-
-.devorah img {
-  width: 200px;
-}
-
-.earth {
-  position: absolute;
-  top: 55%;
-  transition: all 0.3s;
-  left: 8%; 
-  width: "600px"
-}
-
-.earth img {
-  width: 600px;
-}
-
-.aurelia {
-  position: absolute;
-  top: 25%;
-  transition: all 0.3s;
-  right: 0%; 
-  width: "350px"
-}
-
-.aurelia img {
-  width: 350px;
-}
-
-.asteroid {
-  position: absolute;
-  top: 60%;
-  transition: all 0.3s;
-  right: 2%; 
-  width: "1000px"
-}
-
-.asteroid img {
-  width: 1000px;
-}
-
-.text-info {
-  text-align: center;
-  font-size: 20px;
-  color: white;
-}
-
 .footer {
   background-image: linear-gradient(-130deg, #4facfe 0%, #00f2fe 100%);
   height: 300px;
@@ -155,28 +77,6 @@ a:visited {
 .footer img.pirate {
   width: 380px;
   margin-right: -150px;
-}
-
-
-
-
-.googlyPlay {
-  width: 272px;
-  height: 67px;
-  background-image: url(../images/HomePage/Home_Section_1/GooglePlay.png);
-  background-size: 100% 100%;
-  background-color: transparent;
-  border: none;
-  margin-right: 20px;
-}
-
-.appStore {
-  width: 272px;
-  height: 67px;
-  background-image: url(../images/HomePage/Home_Section_1/AppleStore.png);
-  background-size: 100% 100%;
-  background-color: transparent;
-  border: none;
 }
 
 .drumming {
@@ -242,41 +142,6 @@ a:visited {
   border: none;
 }
 
-.whos {
-  margin-left: 15px;
-  width: 1142px;
-  height: 520px;
-  background-image: url(../images/About/section2/Who.png);
-  background-size: 100% 100%;
-  background-color: transparent;
-  border: none;
-}
-
-.mission {
-  margin-left: 15px;
-  width: 565px;
-  height: 220px;
-  background-image: url(../images/About/section2/Mission.png);
-  background-size: 100% 100%;
-  background-color: transparent;
-  border: none;
-}
-
-.vision {
-  margin-left: 15px;
-  width: 565px;
-  height: 220px;
-  background-image: url(../images/About/section2/Vision.png);
-  background-size: 100% 100%;
-  background-color: transparent;
-  border: none;
-}
-
-.mask_back {
-  height: 100vh;
-  /* -webkit-mask-image: linear-gradient(black, transparent); */
-  /* mask-image: linear-gradient(black, transparent); */
-}
 
 .about {
   height: 100vh;

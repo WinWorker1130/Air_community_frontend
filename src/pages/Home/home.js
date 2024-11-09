@@ -58,14 +58,12 @@ export default function Main() {
                 <div className="logo">
                     <div style={{ textAlign: 'center' }}>
                         <img src={Logo} alt="Logo" />
-                        <div className="text-info">
-                            Air Drumming is a rhythmic exploration, a lifestyle statement, and a social movement,
-                        </div>
-                        <div className="text-info">
-                            that integrates users seamlessly across the mobile application, the physical
-                        </div>
-                        <div className="text-info">
-                            experience, and their connection with the larger communities.
+                        <div style={{display: 'flex', justifyContent: 'center'}}>
+                            <div className="text-info">
+                                Air Drumming is a rhythmic exploration, a lifestyle statement, and a social movement,
+                                that integrates users seamlessly across the mobile application, the physical
+                                experience, and their connection with the larger communities.
+                            </div>
                         </div>
                         <div style={{ marginTop: 30 }}>
                             <button className='googlyPlay'></button>

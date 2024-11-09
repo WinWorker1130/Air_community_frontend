@@ -82,131 +82,151 @@ const SolarSystem = () => {
       <div
         onMouseEnter={() => link_section()}
         onMouseLeave={() => setHover(false)}
-        style={styles.container}>
-        <div style={styles.mask}>
-          <img src={Milestones} style={{ marginTop: "13%" }} />
-          <div style={{ justifyContent: "center", width: "100%" }}>
-            <div style={{...styles.years_group, left: `${move}%`}}>
-              {
-                planets.map((planet, index) => {
-                  return (
-                    <div>
-                      <img src={planet} style={year === years[index] ? { ...styles.palnet, width: 64, height: 64 } : styles.palnet} onClick={() => change_degree(years[index], index)} />
-                      {year === years[index] ? <div style={{ color: "white", fontSize: 32, transition: "0.7s" }}>{years[index]}</div> : ""}
-                    </div>
-                  )
-                })
-              }
-            </div>
-            {year === 2024 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <img src={image_2024} style={styles.animation} />
-            </div> : ""}
-            {year === 2023 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2023</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Performed at Singapore New Year Countdown </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Peformed at Chinese New Year @ River Hongbao </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Performed at Singapore National Day Parade </div>
-                </div>
-              </div>
-              <img src={image_2023_1} style={styles.animation} />
-              <img src={image_2023_2} style={styles.animation} />
-            </div> : ""}
-            {year === 2022 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2022</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Showcased and performed for Somerset Belt Arts Fest Opening </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Showcased sustainable lights installation for Singapore Night Festival @ GR.iD </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Received Singapore Young Entrepreneur Award for Quality Education and Responsible Supply Chain </div>
-                </div>
-              </div>
-              <img src={image_2022_1} style={styles.animation} />
-              <img src={image_2022_2} style={styles.animation} />
-            </div> : ""}
-            {year === 2021 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2021</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Launched digital music series Dru(musical) and Cajon online with support from </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:National Arts Council (NAC) </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Launched livestreaming show and music videos with support from Somerset Belt  </div>
-                </div>
-              </div>
-              <img src={image_2021} style={styles.animation} />
-            </div> : ""}
-            {year === 2019 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2019</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Performed at Singapore New Year Countdown  </div>
-                </div>
-              </div>
-              <img src={image_2019} style={styles.animation} />
-            </div> : ""}
-            {year === 2017 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2017</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Initiated Green Drumming, Singapore's first innovative-recycled percussion group </div>
-                </div>
-              </div>
-              <img src={image_2017} style={styles.animation} />
-            </div> : ""}
-            {year === 2015 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2015</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Singapore's biggest Cajon festival, Box'Out returned for third edition </div>
-                  <div style={{ fontSize: 16, color: "white" }}>:Performed at President Star Charity show </div>
-                </div>
-              </div>
-              <img src={image_2015} style={styles.animation} />
-            </div> : ""}
-            {year === 2014 ? <div style={{ textAlign: "flex-start", position: 'absolute', zIndex: 9, top: "37%", left: "25%" }}>
-              <div style={{ display: "flex", justifyContent: "flex-start", alignItems: "center" }}>
-                <div style={{paddingLeft: 35}}>
-                  <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2014</span>
-                </div>
-                <div style={{ textAlign: "left" }}>
-                  <div style={{ fontSize: 16, color: "white" }}>:Singapore's biggest Cajon festival, Box'Out returned for second edition </div>
-                </div>
-              </div>
-              <img src={image_2014} />
-            </div> : ""}
+        className='milestone-container'>
+        <div className='milestone-mask'>
+          <img src={Milestones} className='milestones-title' />
+          <div className='years-group' style={{ left: `${move}%` }}>
+            {
+              planets.map((planet, index) => {
+                return (
+                  <div>
+                    <img src={planet} className={year === years[index] ? 'palnet_select' : "palnet"}
+                      onClick={() => change_degree(years[index], index)} />
+                    {year === years[index] ? <div style={{ color: "white", fontSize: 32, transition: "0.7s" }}>{years[index]}</div> : ""}
+                  </div>
+                )
+              })
+            }
           </div>
+          {year === 2024 ? <div className='milestones_subimages'>
+            <img src={image_2024} className='milestone-2024' />
+          </div> : ""}
+          {year === 2023 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2023</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Performed at Singapore New Year Countdown</li>
+                  <li>Peformed at Chinese New Year @ River Hongbao</li>
+                  <li>Performed at Singapore National Day Parade</li>
+                </ul>
+              </div>
+            </div>
+            <div className='year_two_images'>
+              <div className='milestone-2023_1' />
+              <div className='milestone-2023_2' />
+            </div>
+          </div> : ""}
+          {year === 2022 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2022</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Showcased and performed for Somerset Belt Arts Fest Opening</li>
+                  <li>Showcased sustainable lights installation for Singapore Night Festival @ GR.iD</li>
+                  <li>Received Singapore Young Entrepreneur Award for Quality Education and Responsible Supply Chain</li>
+                </ul>
+              </div>
+            </div>
+            <div className='year_two_images'>
+              <div className='milestone-2022_1' />
+              <div className='milestone-2022_2' />
+            </div>
+          </div> : ""}
+          {year === 2021 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2021</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Launched digital music series Dru(musical) and Cajon online with support from</li>
+                  <li>National Arts Council (NAC)</li>
+                  <li>Launched livestreaming show and music videos with support from Somerset Belt</li>
+                </ul>
+              </div>
+            </div>
+            <img src={image_2021} className='milestone-2021' />
+          </div> : ""}
+          {year === 2019 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2019</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Performed at Singapore New Year Countdown</li>
+                </ul>
+              </div>
+            </div>
+            <img src={image_2019} className='milestone-2021' />
+          </div> : ""}
+          {year === 2017 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2017</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Initiated Green Drumming, Singapore's first innovative-recycled percussion group</li>
+                </ul>
+              </div>
+            </div>
+            <img src={image_2017} className='milestone-2021' />
+          </div> : ""}
+          {year === 2015 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2015</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Singapore's biggest Cajon festival, Box'Out returned for third edition</li>
+                  <li>Performed at President Star Charity show</li>
+                </ul>
+              </div>
+            </div>
+            <img src={image_2015} className='milestone-2021' />
+          </div> : ""}
+          {year === 2014 ? <div className='milestones_subimages'>
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+              {/* <div style={{ paddingLeft: 35 }}>
+                <span style={{ fontSize: 24, color: "white", marginRight: 10 }}>2014</span>
+              </div> */}
+              <div style={{ textAlign: "left" }}>
+                <ul style={{ fontSize: 15, color: "white" }}>
+                  <li>Singapore's biggest Cajon festival, Box'Out returned for second edition</li>
+                </ul>
+              </div>
+            </div>
+            <img src={image_2014} className='milestone-2021' />
+          </div> : ""}
           <div className="solar-system">
             <div className="sun">
-              <div style={{ width: 637, height: 637, backgroundImage: `url(${Earth})`, backgroundSize: "100% 100%" }}></div>
-              {/* <img src={Earth} width={637} height={637}/> */}
+              <div className='solar-earth' />
             </div>
-            <div className="orbit" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree*8}deg)` }}>
-              <div className="blue"></div>
+            <div className="orbit-blue" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree * 2}deg)` }}>
+              <div className="blue" />
+              <div className="pink" />
+              <div className="yellow" />
             </div>
-            <div className="orbit" style={{ width: 950, height: 950, transition: 'transform 0.7s ease', transform: `rotate(${degree*6}deg)` }}>
-              <div className="pink"></div>
-            </div>
-            <div className="orbit" style={{ width: 1550, height: 1550, transition: 'transform 0.7s ease', transform: `rotate(${degree*7}deg)` }}>
+            <div className="orbit-Khroma" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree * 4}deg)` }}>
               <div className="Khroma"></div>
+              <div className="green"></div>
             </div>
-            <div className="orbit" style={{ width: 1850, height: 1850, transition: 'transform 0.7s ease', transform: `rotate(${degree*5}deg)` }}>
-              <div className="Imperialis"></div>
+            <div className="orbit-Imperialis" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree * 10}deg)` }}>
+              <div className="Imperialis"/>
+              <div className="Devorah" ></div>
+              <div className="Aurelia" />
             </div>
-            <div className="orbit" style={{ width: 2050, height: 2050, transition: 'transform 0.7s ease', transform: `rotate(${degree*9}deg)` }}>
+            <div className="orbit-Mylocritas" style={{ transition: 'transform 0.7s ease', transform: `rotate(${degree * 4}deg)` }}>
               <div className="Mylocritas"></div>
+              <div className="Solarion"></div>
+              <div className="Stellaris"></div>
             </div>
             {/* <div className="orbit" style={{ animation: "rotate 25s linear infinite", width: 2050, height: 2050 }}>
           <div className="Mylocritas"></div>
@@ -226,14 +246,6 @@ const styles = {
     backgroundImage: `url(${MilestonesBack})`,
     backgroundSize: "100% 100%",
   },
-  mask: {
-    mask: `url(${MaskImage}) no-repeat`,
-    maskSize: "100vw 1526px",
-    textAlign: "center",
-    position: 'relative',
-    height: 1526,
-    overflow: 'hidden',
-  },
   orbit: {
     position: 'absolute',
     border: '2px solid rgba(255, 255, 255, 0.1)',
@@ -250,17 +262,6 @@ const styles = {
   },
   animation: {
     animation: animations.popIn
-  },
-  years_group: {
-    display: "flex", 
-    alignItems: "center", 
-    marginTop: "3%", 
-    width: "50%", 
-    justifyContent: "space-between", 
-    height: 200, 
-    position: "absolute",
-    zIndex: 11,
-    transition: "0.5s"
   }
 };
 

@@ -13,25 +13,27 @@ export default function Main() {
     const [hover, setHover] = useState(false);
 
     return (
-        <div style={styles.home} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <div className='service-schools'
+            onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}
+        >
             <div>
                 <img src={Planet_1} style={hover ? {...styles.planet_red, animation: `pop-in ${easings.easeOutExpo} 1.5s forwards`} : styles.planet_red} />
                 <img src={Planet_2} style={hover ? {...styles.planet_green, animation: `pop-in ${easings.easeOutExpo} 1.9s forwards`} : styles.planet_green} />
                 <img src={Planet_3} style={hover ? {...styles.planet_yellow, animation: `pop-in ${easings.easeOutExpo} 0.9s forwards`} : styles.planet_yellow} />
-                <div style={styles.schools}>
+                <div className='schools-detail'>
                     <div style={styles.detail}>
                         <div>
-                            <img src={Schools} className={hover ? 'fadeInLeft_animation' : ''} />
+                            <div className={hover ? 'schools-intro fadeInLeft_animation' : 'schools-intro'} />
                         </div>
-                        <div style={{ marginTop: 15 }} className={hover ? 'provide_animation' : ''} >
-                            <img src={Provide} />
+                        <div style={{ marginTop: 20 }} className={hover ? 'schools-provide provide_animation' : 'schools-provide'} >
+                            <div src={Provide} />
                         </div>
-                        <div style={{ marginTop: 15 }} className={hover ? 'worked_animation' : ''} >
-                            <img src={Worked} />
+                        <div style={{ marginTop: 20 }} className={hover ? 'schools-worked worked_animation' : 'schools-worked'} >
+                            <div src={Worked} />
                         </div>
                     </div>
                     <div style={styles.image}>
-                        <img src={School_back}  className={hover ? 'fadeInRight_animation' : ''} />
+                        <div className={hover ? 'schools-image fadeInRight_animation' : 'schools-image'} />
                     </div>
                 </div>
             </div>
@@ -41,21 +43,7 @@ export default function Main() {
 
 
 const styles = {
-    home: {
-        height: "120vh",
-        width: "100%",
-        position: "relative",
-        backgroundImage: `url(${home_Schools})`,
-        backgroundSize: "100% 100%",
-    },
-    schools: {
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh"
-    },
     detail: {
-        marginRight: 20,
         overflow: "hidden"
     },
     planet_red: {

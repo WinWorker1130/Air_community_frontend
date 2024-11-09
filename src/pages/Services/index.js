@@ -4,7 +4,7 @@ import Corporate from './corporate'
 import Community from './community'
 import Evnets from './events'
 import Background from '../../assets/images/services/services_back.png'
-
+import './service.css'
 
 const styles = {
   background: {

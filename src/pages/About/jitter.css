@@ -35,12 +35,16 @@
   width: 637px;
   height: 637px;
   background-image: url(../../assets/images/About/section3/Earth_crop.png);
-  /* mask: url(../../assets/images/About/section3/mask_img.png) no-repeat;
-  mask-position: 50% 120%;
-  mask-size: 100vw 1526px; */
   background-size: 100% 100%;
   border-radius: 50%;
   top: 20%;
+}
+
+.solar_earth {
+  width: 637px;
+  height: 637px;
+  background-image: url(../../assets/images/About/section3/Earth_crop.png);
+  background-size: 100% 100%
 }
 
 .orbit {
@@ -60,7 +64,7 @@
   border-radius: 50%;
   position: absolute;
   top: 25%;
-  left: 5%;
+  left: 2%;
   transform: translateX(-50%);
 }
 
@@ -71,9 +75,33 @@
   background-size: 100% 100%;
   border-radius: 50%;
   position: absolute;
-  top: 45%;
-  right: -50%;
+  top: 39%;
+  left: 100%;
   transform: translateX(-50%);
+}
+
+.yellow {
+  width: 111px;
+  height: 111px;
+  background-image: url(../../assets/images/About/section3/Planet_Bullet_04.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 85%;
+  left: 21%;
+  transform: translateX(-50%);
+}
+
+.green {
+  width: 96.6px;
+  height: 96.6px;
+  background-image: url(../../assets/images/About/section3/Planet_Bullet_02.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 2%;
+  left: 24%;
+  transform: translate(-50%, 50%);
 }
 
 .Khroma {
@@ -83,8 +111,8 @@
   background-size: 100% 100%;
   border-radius: 50%;
   position: absolute;
-  top: 20%;
-  right: -35%;
+  top: 40%;
+  right: -19%;
   transform: translateX(-50%);
 }
 
@@ -95,8 +123,32 @@
   background-size: 100% 100%;
   border-radius: 50%;
   position: absolute;
-  top: 5%;
-  left: 50%;
+  left: 88%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+.Devorah {
+  width: 375px;
+  height: 376px;
+  background-image: url(../../assets/images/About/section3/Devorah_planet.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: 1%; 
+  top: 29%;
+  transform: translateX(-50%);
+}
+
+.Aurelia {
+  width: 232px;
+  height: 233px;
+  background-image: url(../../assets/images/About/section3/Aurelia_planet.png);
+  background-size: 100% 100%;
+  border-radius: 50%;
+  position: absolute;
+  left: 55%;
+  top: 92%;
   transform: translateX(-50%);
 }
 
@@ -107,8 +159,8 @@
   background-size: 100% 100%;
   border-radius: 50%;
   position: absolute;
-  top: 20%;
-  left: 10%;
+  top: 0%;
+  left: 21%;
   transform: translate(-50%, 50%);
 }
 
@@ -116,6 +168,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(20deg);
   }
@@ -126,11 +179,897 @@
     transform: translateY(-100%);
     opacity: 0;
   }
+
   70% {
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+.about_back {
+  background-image: url(../../assets/images/About/about.png);
+  background-size: 100% 100%
+}
+
+.about-main {
+  min-height: 1117px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.whats-title {
+  margin-bottom: 20px;
+  width: 275px;
+  height: 88px;
+}
+
+.whats-content {
+  width: 466px;
+  height: 365px;
+}
+
+.whats-detail {
+  font-size: 16px;
+  color: white;
+}
+
+.whats-phone {
+  background-image: url(../../assets/images/About/section_1/GraphicBox.png);
+  width: 722px;
+  height: 503.34px;
+  position: relative
+}
+
+.whats-phone-body {
+  position: absolute;
+  top: 44%;
+  left: 19%;
+}
+
+.phone-screen-2 {
+  position: absolute;
+  bottom: -4%;
+  left: 19%;
+  transition: transform 0.5s ease;
+  transform: translateY(-10%);
+}
+
+.phone-screen-2-animation {
+  position: absolute;
+  bottom: -4%;
+  left: 19%;
+  transition: transform 0.5s ease;
+  transform: translateY(-63%) rotate(-3deg)
+}
+
+.phone-screen-1 {
+  position: absolute;
+  bottom: -4%;
+  left: 19%;
+  transition: transform 0.5s ease;
+  transform: translateY(-11%);
+}
+
+.phone-screen-1-animation {
+  position: absolute;
+  bottom: -4%;
+  left: 19%;
+  transition: transform 0.5s ease;
+  transform: translateY(-118%) rotate(-6deg)
+}
+
+.whats-planet-blue {
+  position: absolute;
+  bottom: -5%;
+  right: 0%;
+  width: 128;
+  height: 128;
+  z-index: 9;
+}
+
+.whats-planet-blue-animation {
+  position: absolute;
+  bottom: -5%;
+  right: 0%;
+  width: 128;
+  height: 128;
+  z-index: 9;
+  animation: pop-in 2s forwards;
+}
+
+.whats-planet-green {
+  position: absolute;
+  bottom: 12%;
+  left: 40%;
+  width: 92;
+  height: 92;
+  z-index: 9;
+}
+
+.whats-planet-green-animation {
+  position: absolute;
+  bottom: 12%;
+  left: 40%;
+  width: 92;
+  height: 92;
+  z-index: 9;
+  animation: pop-in 1.6s forwards;
+}
+
+.whats-planet-red {
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  width: 46.08;
+  height: 46.08;
+  z-index: 9;
+}
+
+.whats-planet-red-animation {
+  position: absolute;
+  top: -10%;
+  right: 10%;
+  width: 46.08;
+  height: 46.08;
+  animation: pop-in 1.6s forwards;
+}
+
+.play-container {
+  min-height: 1021px;
+  align-content: center;
+  text-align: center;
+}
+
+
+.whos {
+  margin-left: 15px;
+  width: 1142px;
+  height: 520px;
+  background-image: url(../../assets/images/About/section2/Who.png);
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.mission {
+  margin-left: 15px;
+  width: 565px;
+  height: 220px;
+  background-image: url(../../assets/images/About/section2/Mission.png);
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.vision {
+  margin-left: 15px;
+  width: 565px;
+  height: 220px;
+  background-image: url(../../assets/images/About/section2/Vision.png);
+  background-size: 100% 100%;
+  background-color: transparent;
+  border: none;
+}
+
+.milestone-container {
+  text-align: center;
+  position: 'relative';
+  height: 1526;
+  background-image: url(../../assets/images/About/section3/MIlestone_BG.png);
+  background-size: 100% 100%;
+}
+
+.milestone-mask {
+  mask: url(../../assets/images/About/section3/mask_img.png) no-repeat;
+  mask-size: 100vw 1526px;
+  text-align: center;
+  position: relative;
+  height: 1526px;
+  overflow: hidden;
+}
+
+.milestones-title {
+  margin-top: 13%;
+}
+
+.palnet {
+  transition: 0.7s;
+  width: 32px;
+  height: 32px
+}
+
+.palnet_select {
+  transition: 0.7s;
+  width: 64px;
+  height: 64px
+}
+
+.years-group {
+  display: flex;
+  align-items: center;
+  margin-top: 3%;
+  width: 50%;
+  justify-content: space-between;
+  height: 200px;
+  position: absolute;
+  z-index: 11;
+  transition: 0.5s;
+  left: 0%;
+}
+
+.milestones_subimages {
+  text-align: flex-start;
+  position: absolute;
+  z-index: 9;
+  top: 37%;
+  width: 100%;
+  text-align: center;
+}
+
+.milestone-2024 {
+  animation: pop-in 0.6s forwards;
+  width: 820px;
+  height: 470px;
+}
+
+.year_two_images {
+  display: flex;
+  flex-direction: unset;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.milestone-2023_1 {
+  animation: pop-in 0.6s forwards;
+  background-image: url(../../assets/images/About/section3/2023_1.png);
+  background-size: 100% 100%;
+  width: 396px;
+  height: 470px;
+}
+
+.milestone-2023_2 {
+  animation: pop-in 0.6s forwards;
+  background-image: url(../../assets/images/About/section3/2023_2.png);
+  background-size: 100% 100%;
+  width: 396px;
+  height: 470px;
+}
+
+.milestone-2022_1 {
+  animation: pop-in 0.6s forwards;
+  background-image: url(../../assets/images/About/section3/2022_1.png);
+  background-size: 100% 100%;
+  width: 396px;
+  height: 470px;
+}
+
+.milestone-2022_2 {
+  animation: pop-in 0.6s forwards;
+  background-image: url(../../assets/images/About/section3/2022_2.png);
+  background-size: 100% 100%;
+  width: 396px;
+  height: 470px;
+}
+
+.orbit-blue {
+  position: absolute;
+  top: 0%;
+  width: 1019px;
+  height: 1019px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.orbit-pink {
+  position: absolute;
+  top: 0%;
+  width: 1019px;
+  height: 1019px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.orbit-Khroma {
+  position: absolute;
+  top: -50%;
+  width: 1911px;
+  height: 1911px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.orbit-Imperialis {
+  position: absolute;
+  top: -25%;
+  width: 1477px;
+  height: 1477px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.orbit-Mylocritas {
+  position: absolute;
+  top: -67%;
+  width: 2165px;
+  height: 2165px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  transform: rotate(10deg);
+}
+
+.mask_back {
+  height: 1257px;
+  position: relative;
+}
+
+.events_about{
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/About/section_4/Section_04_back.png);
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0%;
+}
+
+.about_events_detail {
+  width: 100%;
+  height: 100%; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  position: absolute
+}
+
+.abouts-title {
+  width: 299px;
+  height: 88px;
+}
+
+.abouts-where {
+  width: 517px;
+  color: white;
+  font-size: 15px;
+}
+
+@media (max-width: 360px) {
+  .about_back {
+    background-image: url(../../assets/images/About/About_mobile.png);
+    min-height: 3264px;
+    background-size: 100% 100%
+  }
+
+  .about-main {
+    height: 1117px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column-reverse;
+  }
+
+  .whats-about {
+    position: relative;
+    padding-top: 50px;
+  }
+
+  .whats-title {
+    margin-bottom: 20px;
+    width: 184px;
+    height: 58px;
+  }
+
+  .whats-content {
+    width: 312px;
+    height: 365px;
+  }
+
+  .whats-detail {
+    font-size: 14px;
+    color: white;
+  }
+
+  .whats-phone {
+    background-image: url(../../assets/images/About/section_1/GraphicBox.png);
+    background-size: 100% 100%;
+    width: 300.34px;
+    height: 203.49px;
+    position: relative
+  }
+
+  .whats-phone-body {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 225px;
+  }
+
+  .phone-screen-2 {
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    transition: transform 0.5s ease;
+    transform: translateY(-10%);
+    width: 225px;
+  }
+
+  .phone-screen-2-animation {
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    transition: transform 0.5s ease;
+    transform: translateY(-63%) rotate(-3deg);
+    width: 225px;
+  }
+
+  .phone-screen-1 {
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    transition: transform 0.5s ease;
+    transform: translateY(-11%);
+    width: 225px;
+  }
+
+  .phone-screen-1-animation {
+    position: absolute;
+    bottom: -15%;
+    left: 10%;
+    transition: transform 0.5s ease;
+    transform: translateY(-118%) rotate(-6deg);
+    width: 225px;
+  }
+
+  .whats-planet-blue {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 57px;
+    height: 57px;
+    z-index: 9;
+  }
+
+  .whats-planet-blue-animation {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    width: 57px;
+    height: 57px;
+    z-index: 9;
+    animation: pop-in 2s forwards;
+  }
+
+  .whats-planet-green {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 41px;
+    height: 41px;
+    z-index: 9;
+  }
+
+  .whats-planet-green-animation {
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    width: 41px;
+    height: 41px;
+    z-index: 9;
+    animation: pop-in 1.6s forwards;
+  }
+
+  .whats-planet-red {
+    position: absolute;
+    top: -10%;
+    right: 30%;
+    width: 46.08;
+    height: 46.08;
+    z-index: 9;
+  }
+
+  .whats-planet-red-animation {
+    position: absolute;
+    top: -10%;
+    right: 30%;
+    width: 46.08;
+    height: 46.08;
+    z-index: 9;
+    animation: pop-in 1.6s forwards;
+  }
+
+  .whos {
+    margin-left: 15px;
+    width: 312px;
+    height: 532.1px;
+    background-image: url(../../assets/images/About/section2/Who_mobile.png);
+    background-size: 100% 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .mission {
+    margin-left: 15px;
+    width: 312px;
+    height: 160px;
+    background-image: url(../../assets/images/About/section2/Mission_mobile.png);
+    background-size: 100% 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .vision {
+    margin-left: 15px;
+    width: 312px;
+    height: 160px;
+    background-image: url(../../assets/images/About/section2/Vision_mobile.png);
+    background-size: 100% 100%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .milestone-container {
+    text-align: center;
+    position: 'relative';
+    height: 923.85px;
+    width: 360.01px;
+    background-image: url(../../assets/images/About/section3/Mask_group.png);
+    background-size: 100% 100%;
+  }
+
+  .milestone-mask {
+    mask: unset;
+    mask-size: 0px 0px;
+    text-align: center;
+    position: relative;
+    height: 923.85px;
+    overflow: hidden;
+  }
+
+  .milestones-title {
+    margin-top: 25%;
+    width: 138px;
+    height: 29px;
+  }
+
+  .years-group {
+    display: flex;
+    align-items: center;
+    margin-top: 3%;
+    width: 100%;
+    justify-content: space-between;
+    height: 100px;
+    position: absolute;
+    z-index: 11;
+    transition: 0.5s;
+    left: -50%;
+  }
+
+  .palnet {
+    transition: 0.7s;
+    width: 16.1px;
+    height: 16.1px
+  }
+
+  .palnet_select {
+    transition: 0.7s;
+    width: 32px;
+    height: 32px
+  }
+
+  .milestones_subimages {
+    text-align: flex-start;
+    position: absolute;
+    z-index: 9;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .milestone-2024 {
+    animation: pop-in 0.6s forwards;
+    width: 312px;
+    height: 175px;
+  }
+
+  .year_two_images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .milestone-2023_1 {
+    animation: pop-in 0.6s forwards;
+    background-image: url(../../assets/images/About/section3/2023_1_mobile.png);
+    background-size: 100% 100%;
+    width: 312px;
+    height: 175px;
+  }
+
+  .milestone-2023_2 {
+    animation: pop-in 0.6s forwards;
+    background-image: url(../../assets/images/About/section3/2023_2_mobile.png);
+    background-size: 100% 100%;
+    width: 312px;
+    height: 175px;
+  }
+
+  .milestone-2022_1 {
+    animation: pop-in 0.6s forwards;
+    background-image: url(../../assets/images/About/section3/2022_1_mobile.png);
+    background-size: 100% 100%;
+    width: 312px;
+    height: 175px;
+  }
+
+  .milestone-2022_2 {
+    animation: pop-in 0.6s forwards;
+    background-image: url(../../assets/images/About/section3/2022_2_mobile.png);
+    background-size: 100% 100%;
+    width: 312px;
+    height: 175px;
+  }
+
+  .milestone-2021 {
+    animation: pop-in 0.6s forwards;
+    width: 312px;
+    height: 175px;
+  }
+
+  .sun {
+    position: absolute;
+    width: 222.95px;
+    height: 222.95px;
+    background-image: url(../../assets/images/About/section3/Earth_crop.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    top: 50%;
+  }
+
+  .orbit-blue {
+    position: absolute;
+    top: 40%;
+    width: 356.65px;
+    height: 356.65px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: rotate(145deg);
+  }
+
+  .blue {
+    width: 44.8px;
+    height: 44.8px;
+    background-image: url(../../assets/images/About/section3/Planet_03-1.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+
+  .pink {
+    width: 44.8px;
+    height: 44.8px;
+    background-image: url(../../assets/images/About/section3/Planet_03.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 20%;
+    left: 94%;
+  }
+
+  .yellow {
+    width: 111px;
+    height: 111px;
+    background-image: url(../../assets/images/About/section3/Planet_Bullet_04.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 84%;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+
+  .orbit-Imperialis {
+    position: absolute;
+    top: 32%;
+    width: 465px;
+    height: 465px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+
+  .Imperialis {
+    width: 114px;
+    height: 114px;
+    background-image: url(../../assets/images/About/section3/Imperialis_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 71%;
+    left: 87%;
+    transform: translateX(-50%);
+  }
+  
+  .Devorah {
+    width: 73px;
+    height: 73px;
+    background-image: url(../../assets/images/About/section3/Devorah_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 71%;
+    left: 9%;
+    transform: translateX(-50%);
+  }
+
+  .green {
+    width: 43.5px;
+    height: 43.5px;
+    background-image: url(../../assets/images/About/section3/Planet_Bullet_02.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 21%;
+    transform: translate(-50%, 50%);
+  }
+
+  .Khroma {
+    width: 80.5px;
+    height: 80.5px;
+    background-image: url(../../assets/images/About/section3/Khroma_Planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 81%;
+    left: 27%;
+    transform: translate(-50%, 50%);
+  }
+
+  .orbit-Khroma {
+    position: absolute;
+    top: 21%;
+    width: 601px;
+    height: 601px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+
+  .Mylocritas {
+    width: 77px;
+    height: 77px;
+    background-image: url(../../assets/images/About/section3/Murkara_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 2%;
+    left: 75%;
+    transform: translateX(-50%);
+  }
+  
+  .Aurelia {
+    width: 118px;
+    height: 118px;
+    background-image: url(../../assets/images/About/section3/Aurelia_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: -13%;
+    transform: translateX(-50%);
+  }
+
+  .Solarion {
+    width: 80.5px;
+    height: 80.5px;
+    background-image: url(../../assets/images/About/section3/Solarion_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0%;
+    left: 21%;
+    transform: translate(-50%, 50%);
+  }
+
+  .Stellaris {
+    width: 80.5px;
+    height: 80.5px;
+    background-image: url(../../assets/images/About/section3/Stellaris_planet.png);
+    background-size: 100% 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 84%;
+    left: 27%;
+    transform: translate(-50%, 50%);
+  }
+
+  .orbit-Mylocritas {
+    position: absolute;
+    top: 12%;
+    width: 757.75px;
+    height: 757.75px;
+    border: 1px solid rgba(37, 37, 37, 0.5);
+    border-radius: 50%;
+    transform: rotate(10deg);
+  }
+
+  .mask_back {
+    height: 559px;
+    position: relative;
+  }
+
+  .events_about{
+    height: 240px;
+    background-image: url(../../assets/images/About/section_4/setion_back_mobile.png);
+    background-size: 100% 100%;
+  }
+
+  .abouts-title {
+    width: 200px;
+    height: 58px;
+  }
+
+  .about_events_detail {
+    width: 100%;
+    height: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    position: absolute;
+    top: 40px;
+  }
+
+  .abouts-where {
+    width: 296px;
+    color: white;
+    font-size: 15px;
+  }
+
+  .join {
+    width: 172px;
+    height: 46px;
+    background-image: url(../../assets/images/About/section_4/JoinUs_btn.png);
+    background-color: transparent;
+    background-size: 100% 100%;
+    border: none;
+    margin-top: 20px;
+    transition: 0.3s
+  }
+  
+  .join:hover {
+    width: 172px;
+    height: 46px;
+    background-image: url(../../assets/images/About/section_4/JoinUs_btn.png);
+    background-size: 100% 100%;
+    border: none;
+    margin-top: 20px;
+    box-shadow: none;
+    transition: 0.3s
   }
 }

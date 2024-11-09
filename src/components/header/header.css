@@ -18,6 +18,15 @@
     width: 40%;
 }
 
+.header-logo-img {
+    width: 157px;
+    height: 76px;
+}
+
+.basic-menu {
+    visibility: hidden;
+}
+
 .navbar{
     width: 60%;
 }

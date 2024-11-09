@@ -8,14 +8,12 @@ import './jitter.css'
 export default function Events() {
   return (
     <div className='mask_back'>
-      <div className='about'>
-        <div style={{ width: "100%", height: "100%", display: "flex", justifyContent: 'center', alignItems: "center" }}>
+      <div className='events_about' />
+      <div className='about_events_detail' >
           <div style={{ textAlign: 'center' }}>
-            <img src={Asteroid} alt='Asteroid' />
-            <div style={{ color: "white" }}>
+            <img src={Asteroid} alt='Asteroid' className='abouts-title' />
+            <div className='abouts-where'>
               The Air+ Community is where users from all walks of life connect - our
-            </div>
-            <div style={{ color: "white" }}>
               players, creators, merchants and partners.
             </div>
             <div>
@@ -24,7 +22,6 @@ export default function Events() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
